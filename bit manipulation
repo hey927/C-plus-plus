@@ -1,0 +1,31 @@
+/*Count the set bits in a N digit binary integer
+The first contains a single integer T denoting the number of test cases. Each test case contains a single integer N
+For each test case, print a single integer denoting the number of set bits in the binary representation of the given N
+*/
+
+#include <iostream>
+using namespace std;
+
+int count_one(int n)
+{
+	int count = 0;
+	while(n)
+	{
+		n = n & (n-1);
+		count++;
+	}
+   	return count;
+}
+
+int main()
+{
+	int num_test_cases, number, result;
+	cin >> num_test_cases;
+	cin >> number;
+
+	for (int i=0; i<num_test_cases; i++){
+		result = count_one(number);
+	}
+	cout << result;
+}
+Contact GitHub API Training Shop Blog About
