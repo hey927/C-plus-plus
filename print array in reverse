@@ -1,0 +1,23 @@
+/*First line of input contains, N - size of the array. 
+Following N lines, each contains one integer, ith element of the array i.e. A[i].
+Print all the elements of the array in reverse order, each element in a new line.
+
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int size, new_size;
+	cin >> size;
+	new_size = size-1;
+	int arr[new_size];
+	for (int i=0; i<size; i++){
+		cin >> arr[i];
+	}
+	for (int i=new_size; i>=0; i--){
+		cout << arr[i] << endl;
+	}
+    return 0;
+}
